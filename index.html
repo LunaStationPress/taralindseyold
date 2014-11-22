@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Tara Lindsey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 750px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      font-size: 24px;
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: 40px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-wrapper .container{width:100%;}
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel{margin-bottom:0;}
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: 800px;
+        max-width: 1500px;
+        height: 350px;
+        margin-top: 50px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+
+      .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 650px;
+      padding: 0 50px;
+      margin-top: 150px;
+      }
+
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 0;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 225px;
+      }
+      .carousel img {
+        height: 150px;
+        width:100% !important;
+        margin-top: 50px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 60px;
+        margin-top: 65px;
+      }
+      .carousel-caption h1 {
+        font-size: 11px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 14px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+
+    .hide{display:none;}
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  <body>
+
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">taralindsey.com</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div style="height: 0px;" class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#esbat">Esbat</a></li>
+                <li><a href="#social">Social</a></li>
+                <li><a href="#idirlion">Idirlion</a></li>
+                <li><a href="#contact" class="fancybox">Contact</a></li>
+
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/site-images/carousel1.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>“As soon as I define myself I’m dead.” </h1>
+                <p class="lead">~ Alejandro Jodorowsky</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/site-images/carousel6.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>“The greatest poetry is revealing to the reader, the beauty in something that was so simple you had taken it for granted. That, I think, is the job of the poet.” </h1>
+                <p class="lead">~ Neil deGrasse Tyson</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/site-images/carousel5.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>“If you get loud, everyone gets louder to top you. And then everyone’s shouting and no one’s listening. If you want everyone to listen to you, get quieter. People will listen.” </h1>
+                <p class="lead">~ Clive Barker
+</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/site-images/carousel12.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>“I learned a long time ago, that if you’re missing somebody, just look up at the night sky. Whoever it is, wherever they are, chances are they’re looking at the stars, just like you. Sometimes, for all its size, the universe isn’t such a big place after all.” </h1>
+                <p class="lead">~ Sarah Jane Smith</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/site-images/carousel14.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>“Why is magic synonymous with artifice? Why is the fantastic synonymous with a lie? If art is a lie, then I will tell that that lie every day until it’s fucking true.” </h1>
+                <p class="lead">~ Lady Gaga</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/site-images/carousel13.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>“Everyone has talent. What is rare is the courage to follow the talent to the dark place where it leads.” </h1>
+                <p class="lead">~ Erica Jong</p>
+            </div>
+          </div>
+        </div>
+
+
+ <div class="item">
+          <img src="img/site-images/carousel8.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>“O body swayed to music, O brightening glance, How can we know the dancer from the dance?”
+</h2>
+ <p class="lead">~ William Butler Yeats</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="span4">
+          <a href="#esbat"><img src="img/site-images/main-circles-book.jpg" style="width: 140px; height: 140px;" alt=""></a>
+          <h2>The Esbat Sequence</h2>
+          <p>My first <a href="http://www.amazon.com/The-Esbat-Sequence-Tara-Lindsey/dp/1938697243/ref=sr_1_1?ie=UTF8&qid=1374538862&sr=8-1&keywords=the+esbat+sequence" target="_blank">book of poems</a>, published by Luna Station Press. It is my favorite thing.</p>
+          <p><a class="btn" href="#esbat">View details »</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <a href="#social"><img src="img/site-images/main-circles-social.jpg" style="width: 140px; height: 140px;" alt=""></a>
+          <h2>Social Media</h2>
+          <p>I am on <a href="http://twitter.com/WordsMusicLife" target="_blank">Twitter</a> constantly and <a href="http://thegirlinthelighthouse.tumblr.com" target="_blank">Tumblr</a> occasionally. I am never on Facebook.</p>
+          <p><a class="btn" href="#social">View details »</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <a href="#idirlion"><img src="img/site-images/main-circles-idirlion.jpg" style="width: 140px; height: 140px;" alt=""></a>
+          <h2>The Idirlion Project</h2>
+          <p>My outer work, <a href="http://theidirlionproject.com" target="_blank">manifested</a>.<br/></p>
+          <p><a class="btn" href="#idirlion">View details »</a></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+<hr class="featurette-divider">
+
+      <div class="featurette" id="about">
+        <img class="featurette-image pull-right" src="img/site-images/feature-tara.jpg">
+        <h2 class="featurette-heading">My name is Tara Lindsey. <span class="muted"><br>I am a </span></h2>
+        <p class="lead">poet, percussionist, photographer (all the header photos are mine), shamanic practitioner, shape shifter &amp; Trickster.</p>
+        <p class="lead">I am always learning; about the Hermetic arts, about theoretical physics, about 19th century European art, &amp; about the stories, songs and language of my Irish ancestors.</p>
+
+        <p class="lead">I'll make you laugh. I'll make you think. I make no promises.</p>
+      </div>
+ <p class="pull-right" style="margin-top:20px;"><a href="#">Back to top</a></p>
+      <hr class="featurette-divider">
+
+      <div class="featurette" id="esbat">
+        <img class="featurette-image pull-right" src="img/site-images/feature-esbat.jpg">
+        <h2 class="featurette-heading">With The Esbat Sequence, <span class="muted">Tara Lindsey has</span></h2>
+        <p class="lead">traveled into the mist, bringing back half remembered memories and possible futures. A post-digital seanchaí, finding her voice in a constantly evolving world, she has tapped into something old, and simultaneously very, very new.</p>
+
+<p class="lead">Written mostly during the threshold hours before dawn, these non-linear Trickster tales, of Fire and ash and rebirth, of masks and lighthouses and “a fox who has secret knowledge of interstitial spaces”, are an invitation, to a world of stories and songs and things you can touch, and to more subtle, hidden things as well.</p>
+
+<p class="lead">The Esbat Sequence is a spell, a seed, planted deep in space and time, part of an unfolding cross-dimensional hyper narrative. It’s also as simple to read as a fairy tale, and occasionally twice as dangerous. It will fill your head with ideas. It will change you, if you let it.</p>
+
+<p class="lead">You have been warned.</p>
+<p><a class="btn btn-info" href="http://www.amazon.com/The-Esbat-Sequence-Tara-Lindsey/dp/1938697243/ref=sr_1_1?ie=UTF8&qid=1374538862&sr=8-1&keywords=the+esbat+sequence" target="_blank">Purchase On Amazon »</a></p>
+      </div>
+ <p class="pull-right"><a href="#">Back to top</a></p>
+      <hr class="featurette-divider">
+
+      <div class="featurette" id="social">
+        <img class="featurette-image pull-left" src="img/site-images/creatures.jpg">
+        <h2 class="featurette-heading">So much of social media <span class="muted">feels like a time suck.</span></h2>
+        <p class="lead">Like cultivating a giant field and ending up with three shriveled beans. Twitter feels different to me, like a conversation, if you curate it right. I live on the branches of the Twitter tree when I'm online.</p>
+
+<p class="lead">Speaking of curating, Tumblr is my virtual cabinet of curiosities, where I collect media that inspires me, and even write the occasional blog entry, when 140 characters just won't do.</p>
+          <p><a class="btn btn-info" href="http://twitter.com/WordsMusicLife" target="_blank" style="margin-right:10px;">Twitter »</a> <a class="btn btn-info" href="http://thegirlinthelighthouse.tumblr.com" target="_blank">Tumblr »</a></p>
+
+      </div>
+ <p class="pull-right"><a href="#">Back to top</a></p>
+      <hr class="featurette-divider">
+
+      <div class="featurette" id="idirlion">
+        <img class="featurette-image pull-right" src="img/site-images/feature-idirlion.jpg">
+        <h2 class="featurette-heading">The Idirlion Project is <span class="muted">an energetic current,</span></h2>
+        <p class="lead">running through all of my outer, performance oriented work. It started as a forum to synergize <a href="http://en.wikipedia.org/wiki/Sigil_%28magic%29" target="_blank">siglization</a> with my love of technology. It has grown to encompasses my public shamanic work. (Fire Ceremonies, Journeys, etc)</p>
+          <p class="lead">Its future manifestations feel limitless.</p>
+          <p><a class="btn btn-info" href="http://theidirlionproject.com" target="_blank">The Idirlion Project »</a></p>
+      </div>
+
+       <p class="pull-right" style="margin-top:20px;"><a href="#">Back to top</a></p>
+
+            <hr class="featurette-divider">
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-left lead">“I am no drunkard, but I am no saint either. A medicine man shouldn’t be a saint. He should experience and feel all the ups and downs, the despair and the joy, the magic and the reality, the courage and fear of his people. He should be able to sink as low as a bug or soar like an eagle. You have to be God and the devil, both of them. Being a good medicine man means being right in the midst of the turmoil, not shielding yourself from it. It means embracing life in all its phases. It means not being afraid of cutting up and playing the fool now and then. That’s sacred too.” <br>~ John (Fire) Lame Deer</p>
+      </footer>
+
+    </div><!-- /.container -->
+<div id="contact" class="hide">
+<div id="wufoo-z7x4m1">
+Fill out my <a href="http://taralindsey.wufoo.com/forms/z7x4m1">online form</a>.
+</div>
+<script type="text/javascript">var z7x4m1;(function(d, t) {
+var s = d.createElement(t), options = {
+'userName':'taralindsey',
+'formHash':'z7x4m1',
+'autoResize':true,
+'height':'517',
+'async':true,
+'header':'show'};
+s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+try { z7x4m1 = new WufooForm();z7x4m1.initialize(options);z7x4m1.display(); } catch (e) {}};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');</script>
+</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel({
+interval: 11000
+})
+        })
+      }(window.jQuery)
+    </script>
+
+       <!-- Add fancyBox -->
+<link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/jquery.fancybox.js"></script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $(".fancybox").fancybox({
+            autoSize : false,
+            minWidth : '500px',
+            minHeight : '620px'
+
+          });
+      });
+    </script>
+
+
+</body></html>
